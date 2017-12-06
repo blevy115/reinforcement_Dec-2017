@@ -9,12 +9,8 @@ array = [
 array.each do |city_name|
   puts "#{city_name[:city]}"
   puts "------------"
-  city_name.each do |key, value|
-    if key == :events
-      city_name[:events].each do |event|
+  city_name[:events].each do |event|
         puts "Date: #{event[:date]}, #{event[:attendees]} people"
       end
       puts ""
     end
-  end
-end
